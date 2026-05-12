@@ -1,0 +1,401 @@
+.airlines-directory {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #6ea4c7 0%, #a3b4c9 300px, #f5f7fb 300px, #f5f7fb 100%);
+  padding-bottom: 72px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.directory-shell {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.directory-hero {
+  padding: 54px 0 38px;
+  color: #fff;
+  background: linear-gradient(100deg, #5f9bbf 0%, #9fb2c8 100%);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.directory-hero h1 {
+  margin: 16px 0 10px;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.directory-hero p {
+  margin: 0;
+  max-width: 720px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.directory-main-card {
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  padding: 24px;
+}
+
+.directory-controls {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 14px;
+}
+
+.control {
+  height: 56px;
+  border: 1px solid #d0dae7;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+}
+
+.control svg {
+  color: #0067db;
+  flex-shrink: 0;
+}
+
+.search-box input,
+.filter-box select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.search-box input::placeholder {
+  color: #7c8ba1;
+}
+
+.filter-box select {
+  cursor: pointer;
+}
+
+.results-count {
+  margin: 16px 2px 20px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.results-count strong {
+  color: #0f172a;
+}
+
+.airlines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.airline-card {
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.airline-card:hover {
+  transform: translateY(-3px);
+  border-color: #93c5fd;
+  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.1);
+}
+
+.airline-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.airline-logo-small {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.airline-logo-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.airline-logo-small svg {
+  color: #0067db;
+}
+
+.airline-title h3 {
+  margin: 0 0 6px;
+  color: #0f172a;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.airline-code-small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background: #eaf2ff;
+  color: #0052ae;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.airline-card-info {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.info-row svg {
+  color: #ea580c;
+  flex-shrink: 0;
+}
+
+.airline-card-footer {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #edf2f7;
+}
+
+.view-details {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0067db;
+}
+
+.no-results {
+  margin-top: 20px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #f8fafc;
+  padding: 44px 20px;
+  text-align: center;
+}
+
+.no-results svg {
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.no-results h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 24px;
+}
+
+.no-results p {
+  margin: 8px 0 0;
+  color: #64748b;
+}
+
+.alliance-info {
+  margin-top: 34px;
+}
+
+.alliance-info h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #0f172a;
+  text-align: center;
+}
+
+.alliance-info > p {
+  margin: 12px auto 24px;
+  max-width: 760px;
+  text-align: center;
+  color: #475569;
+  font-size: 16px;
+}
+
+.alliance-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.alliance-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.alliance-card h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 21px;
+}
+
+.alliance-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.alliance-count {
+  display: inline-flex;
+  margin-top: 14px;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #fff1e8;
+  color: #c2410c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.directory-cta {
+  margin-top: 24px;
+  background: linear-gradient(135deg, #0a1929 0%, #1e3a5f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 30px 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.directory-cta h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.directory-cta p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cta-button {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: #ea580c;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #c2410c;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1100px) {
+  .airlines-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .alliance-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .airlines-directory {
+    background: linear-gradient(180deg, #6ea4c7 0%, #a3b4c9 250px, #f5f7fb 250px, #f5f7fb 100%);
+    padding-bottom: 56px;
+  }
+
+  .directory-shell {
+    width: calc(100% - 20px);
+  }
+
+  .directory-hero {
+    padding: 36px 0 28px;
+  }
+
+  .directory-hero h1 {
+    font-size: 34px;
+  }
+
+  .directory-hero p {
+    font-size: 15px;
+  }
+
+  .directory-main-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .directory-controls {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .control {
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .airlines-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .airline-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .airline-title h3 {
+    font-size: 16px;
+  }
+
+  .alliance-info h2 {
+    font-size: 26px;
+  }
+
+  .directory-cta {
+    border-radius: 12px;
+    padding: 24px 14px;
+  }
+
+  .directory-cta h2 {
+    font-size: 24px;
+  }
+}

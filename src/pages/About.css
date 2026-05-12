@@ -1,0 +1,252 @@
+.about-page.about-aof {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #6ea4c7 0%, #a3b4c9 260px, #f5f7fb 260px, #f5f7fb 100%);
+  color: #1f2530;
+  padding-bottom: 56px;
+}
+
+.about-aof .about-hero {
+  padding: 52px 0 30px;
+  background: linear-gradient(100deg, #5f9bbf 0%, #9fb2c8 100%);
+}
+
+.about-aof .about-chip {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.about-aof .about-hero h1 {
+  margin: 16px 0 10px;
+  color: #fff;
+  font-size: clamp(30px, 4.4vw, 62px);
+  line-height: 1.14;
+  max-width: 980px;
+  word-break: break-word;
+}
+
+.about-aof .about-hero p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(15px, 1.8vw, 22px);
+  max-width: 860px;
+  line-height: 1.6;
+}
+
+.about-aof .about-intro {
+  margin-top: 6px;
+}
+
+.about-aof .about-intro-card,
+.about-aof .values-card,
+.about-aof .cta-card,
+.about-aof .stats-box,
+.about-aof .highlight-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.about-aof .about-intro-card {
+  padding: 26px;
+}
+
+.about-aof h2 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.about-aof .about-intro-card p {
+  margin: 0 0 14px;
+  color: #475569;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-aof .about-intro-card p:last-child {
+  margin-bottom: 0;
+}
+
+.about-aof .about-highlights {
+  margin-top: 30px;
+}
+
+.about-aof .highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.about-aof .highlight-card {
+  padding: 20px;
+}
+
+.about-aof .highlight-card svg {
+  color: #ef6333;
+}
+
+.about-aof .highlight-card h3 {
+  margin: 12px 0 8px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.about-aof .highlight-card p {
+  margin: 0;
+  color: #5b6678;
+  line-height: 1.6;
+}
+
+.about-aof .about-stats {
+  margin-top: 30px;
+}
+
+.about-aof .stats-box {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px;
+}
+
+.about-aof .stat-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  padding: 16px;
+  text-align: center;
+}
+
+.about-aof .stat-item svg {
+  color: #ef6333;
+}
+
+.about-aof .stat-item h3 {
+  margin: 10px 0 6px;
+  color: #0f172a;
+  font-size: clamp(28px, 3vw, 38px);
+}
+
+.about-aof .stat-item p {
+  margin: 0;
+  color: #5b6678;
+  font-weight: 600;
+}
+
+.about-aof .about-values {
+  margin-top: 30px;
+}
+
+.about-aof .values-card {
+  padding: 24px;
+}
+
+.about-aof .values-card ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: #475569;
+}
+
+.about-aof .values-card li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.about-aof .values-card strong {
+  color: #0f172a;
+}
+
+.about-aof .about-cta {
+  margin-top: 30px;
+}
+
+.about-aof .cta-card {
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #122b4b 0%, #1e3a5f 100%);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.about-aof .cta-card h2 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.about-aof .cta-card p {
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+}
+
+.about-aof .about-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  background: #ef6333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 12px 24px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.about-aof .about-cta-btn:hover {
+  background: #e45b28;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1100px) {
+  .about-aof .highlight-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-aof .stats-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page.about-aof {
+    background: linear-gradient(180deg, #6ea4c7 0%, #a3b4c9 210px, #f5f7fb 210px, #f5f7fb 100%);
+  }
+
+  .about-aof .about-hero {
+    padding: 34px 0 24px;
+    background: linear-gradient(100deg, #5f9bbf 0%, #9fb2c8 100%);
+  }
+
+  .about-aof .about-hero h1 {
+    font-size: clamp(28px, 8.2vw, 40px);
+    line-height: 1.2;
+    max-width: 100%;
+  }
+
+  .about-aof .about-hero p {
+    font-size: 15px;
+    max-width: 100%;
+    line-height: 1.55;
+  }
+
+  .about-aof .about-chip {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .about-aof .about-intro-card,
+  .about-aof .values-card,
+  .about-aof .cta-card {
+    padding: 18px;
+  }
+
+  .about-aof .highlight-grid,
+  .about-aof .stats-box {
+    grid-template-columns: 1fr;
+  }
+}

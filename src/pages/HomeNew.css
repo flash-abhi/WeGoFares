@@ -1,0 +1,1011 @@
+﻿.home-aof {
+  background: #f3f3f4;
+  color: #1f2530;
+}
+
+.aof-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  grid-template-areas:
+    "content art"
+    "form form";
+  gap: 24px;
+  padding: 40px 48px 52px;
+  background: linear-gradient(100deg, #4f8eb2 0%, #d7c7cf 100%);
+  align-items: center;
+}
+.aof-hero-content { grid-area: content; }
+.aof-hero-art { grid-area: art; }
+.aof-form-row { grid-area: form; width: 100%; margin-top: 8px; }
+
+.aof-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.25;
+  max-width: 760px;
+}
+
+.aof-hero h1 span { color: #e85f20; }
+
+.aof-service-tabs {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.aof-service {
+  border: none;
+  background: transparent;
+  color: #2d3644;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.aof-service-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid #d8dde3;
+  background: #fff;
+  color: #6b7280;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aof-service-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.aof-service.active .aof-service-icon {
+  background: #e87434;
+  border-color: #fff;
+  color: #fff;
+}
+
+.aof-trip-type {
+  margin: 28px 0 18px;
+  display: flex;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  width: fit-content;
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.trip-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1f2530;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.trip-radio:has(input:checked) {
+  background: #f16427;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(241, 100, 39, 0.35);
+}
+
+.trip-radio input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.trip-radio span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trip-radio span::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #f16427;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.trip-radio:has(input:checked) span::before {
+  background: radial-gradient(circle, #ffffff 0 4px, #f16427 5px);
+  border-color: #ffffff;
+}
+
+.trip-radio span {
+  cursor: pointer;
+}
+
+.aof-search-strip {
+  display: grid;
+  gap: 0;
+  background: #fff;
+  border-radius: 16px;
+  overflow: visible;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.16);
+  width: 100%;
+}
+
+.aof-search-strip.oneway {
+  grid-template-columns: 1.8fr 1.8fr 1.25fr 1.2fr 88px;
+}
+
+.aof-search-strip.roundtrip {
+  grid-template-columns: 1.55fr 1.55fr 1.1fr 1.1fr 1.2fr 88px;
+}
+
+.aof-search-cell {
+  padding: 20px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-right: 1px solid #d9dde3;
+  color: #f16427;
+  position: relative;
+  min-height: 78px;
+}
+
+.aof-search-cell .airport-autocomplete,
+.aof-search-cell .airport-input-wrapper { width: 100%; }
+
+.aof-search-cell .airport-input,
+.aof-search-cell input[type="date"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #1f2530;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 500;
+  min-width: 0;
+}
+
+.aof-search-cell input[type="date"] { cursor: pointer; }
+
+.mobile-date-field {
+  display: none;
+}
+
+.aof-date-field {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #1f2530;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.aof-date-field span {
+  color: #4f5b6d;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.aof-date-field strong {
+  max-width: 100%;
+  color: #1f2530;
+  font-size: 17px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.aof-date-field.single-date-field {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.aof-date-field.single-date-field strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.aof-date-popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  z-index: 80;
+  width: min(864px, calc(100vw - 24px));
+  max-width: max-content;
+  background: #fff;
+  border: 1px solid #e1e5ea;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 18px 36px rgba(16, 24, 40, 0.22);
+  color: #252525;
+  transform: translateX(-50%);
+}
+
+.aof-date-popover.single-month {
+  width: min(432px, calc(100vw - 24px));
+}
+
+.aof-calendar-header {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.aof-calendar-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  pointer-events: auto;
+}
+
+.aof-calendar-nav button {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  color: #8b8f96;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aof-calendar-nav button:hover {
+  color: #1f2530;
+}
+
+.aof-calendar-months {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.aof-date-popover.single-month .aof-calendar-months {
+  grid-template-columns: 1fr;
+}
+
+.aof-calendar-month {
+  width: 432px;
+  padding: 18px 28px 22px;
+}
+
+.aof-calendar-month-title {
+  height: 34px;
+  margin-bottom: 22px;
+  color: #252525;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: center;
+}
+
+.aof-calendar-weekdays,
+.aof-calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.aof-calendar-weekdays {
+  margin-bottom: 14px;
+}
+
+.aof-calendar-weekdays span {
+  color: #252525;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.aof-calendar-day {
+  width: 54px;
+  height: 36px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #252525;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.aof-calendar-day:hover:not(:disabled) {
+  background: #e7f3ff;
+}
+
+.aof-calendar-day.outside-month,
+.aof-calendar-day.disabled {
+  color: #b7b7b7;
+}
+
+.aof-calendar-day:disabled {
+  cursor: not-allowed;
+}
+
+.aof-calendar-day.in-range {
+  background: #e5f4ff;
+}
+
+.aof-calendar-day.selected {
+  background: #1f78ff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.aof-search-cell .field-icon,
+.aof-search-cell .clear-icon { display: none; }
+.aof-search-cell .airport-input { padding: 0 !important; }
+
+.aof-search-cell .suggestions-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 40;
+}
+
+/* Full-size airport dropdown panel like reference */
+.aof-search-cell.from-cell .suggestions-dropdown,
+.aof-search-cell.to-cell .suggestions-dropdown {
+  right: auto;
+  width: min(760px, calc(100vw - 56px));
+  max-height: 600px;
+  background: #f1f2f4;
+  border: 1px solid #d6dae0;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.2);
+  padding: 12px;
+}
+
+.aof-search-cell.from-cell .suggestion-item,
+.aof-search-cell.to-cell .suggestion-item {
+  margin-bottom: 8px;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.swap-route-btn {
+  position: absolute;
+  top: 50%;
+  right: -23px;
+  transform: translateY(-50%);
+  z-index: 12;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #d8dde3;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #f16427;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(16, 24, 40, 0.18);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.swap-route-btn:hover {
+  background: #f16427;
+  color: #ffffff;
+}
+
+.swap-route-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.aof-search-cell.passengers {
+  color: #1f2530;
+  font-size: 16px;
+  padding: 0;
+  overflow: visible;
+}
+
+.passenger-trigger {
+  width: 100%;
+  min-height: 78px;
+  border: none;
+  background: transparent;
+  padding: 20px 18px;
+  color: inherit;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.passenger-trigger span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.passenger-trigger .open {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+.aof-passenger-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #dee2e8;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.16);
+  padding: 12px;
+  z-index: 50;
+}
+
+.aof-passenger-dropdown .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.aof-passenger-dropdown .row div { display: flex; align-items: center; gap: 10px; }
+.aof-passenger-dropdown button {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #d1d6dd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.aof-passenger-dropdown select {
+  width: 100%;
+  border: 1px solid #d1d6dd;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.aof-search-btn {
+  border: none;
+  background: #f16427;
+  color: #fff;
+  cursor: pointer;
+  margin: 6px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  min-height: calc(100% - 12px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.aof-search-btn:hover {
+  background: #e65b20;
+}
+
+.aof-search-btn:active {
+  transform: scale(0.98);
+}
+
+/* Keep hero image on right on larger screens */
+@media (max-width: 1500px) {
+  .aof-search-strip.oneway {
+    grid-template-columns: 1.65fr 1.65fr 1.2fr 1.1fr 78px;
+  }
+
+  .aof-search-strip.roundtrip {
+    grid-template-columns: 1.45fr 1.45fr 1.05fr 1.05fr 1.05fr 78px;
+  }
+}
+
+.aof-hero-art {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.aof-hero-art .slice {
+  height: 110px;
+  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
+  background-position: center;
+  background-size: cover;
+}
+
+.aof-hero-art .s1 { background-image: url('https://images.unsplash.com/photo-1601425262040-ba23fe84f701?w=900&h=400&fit=crop'); }
+.aof-hero-art .s2 { background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&h=400&fit=crop'); }
+.aof-hero-art .s3 { background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?w=900&h=400&fit=crop'); width: 70%; }
+
+.aof-deals,
+.aof-grid-four,
+.aof-why,
+.aof-airlines { padding: 32px 48px; }
+
+.aof-deals .head,
+.aof-airlines .head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.aof-deals .head h2,
+.aof-why h2,
+.aof-airlines .head h2 {
+  margin: 0;
+  font-size: clamp(28px, 3.1vw, 40px);
+}
+
+.aof-deals .head button {
+  border: none;
+  background: transparent;
+  color: #526173;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+}
+
+.aof-deals .cards {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: center;
+}
+
+.cards-wrap {
+  position: relative;
+  margin-top: 24px;
+}
+
+.aof-deals .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f0f1f4;
+  box-shadow: 0 6px 16px rgba(16, 24, 40, 0.14);
+  z-index: 4;
+  cursor: pointer;
+}
+.aof-deals .nav-btn.left { left: -18px; }
+.aof-deals .nav-btn.right { right: -18px; }
+
+.deal-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e6e9ef;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 26px rgba(16, 24, 40, 0.14);
+}
+
+.deal-card img { width: 100%; height: 220px; object-fit: cover; flex-shrink: 0; }
+.deal-card .body { padding: 18px; display: flex; flex-direction: column; min-height: 210px; }
+.deal-card h3 { margin: 0 0 10px; font-size: 32px; }
+.deal-card p { margin: 0 0 8px; color: #5b6678; font-size: 20px; }
+.deal-card a {
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: #ef6333;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.aof-grid-four {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid #e3e6eb;
+  border-radius: 12px;
+  padding: 22px 18px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(16, 24, 40, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(16, 24, 40, 0.12);
+}
+
+.info-card .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-card .icon svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2.4;
+}
+
+.icon.blue { background: #dbe6f8; color: #2a73ea; }
+.icon.green { background: #dfe9e5; color: #1f915f; }
+.icon.cyan { background: #d8eff5; color: #20b8e4; }
+.icon.pink { background: #f2e2e8; color: #df3a4b; }
+.icon.yellow { background: #fff1ba; color: #d9a60a; }
+
+.info-card h3 { margin: 0 0 10px; font-size: 30px; }
+.info-card p { margin: 0; color: #4f5d70; line-height: 1.45; font-size: 20px; }
+
+.aof-callout {
+  margin: 8px 48px 28px;
+  background: linear-gradient(90deg, #eed8d8, #dfe2d7);
+  border-radius: 20px;
+  text-align: center;
+  padding: 26px 16px;
+}
+
+.aof-callout h2 { margin: 0; font-size: clamp(26px, 2.6vw, 36px); }
+.aof-callout .btns { margin-top: 16px; display: flex; justify-content: center; gap: 14px; }
+
+.aof-callout a {
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 12px;
+  padding: 10px 18px;
+}
+
+.aof-callout .primary {
+  background: #ef8544;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aof-callout .outline { border: 2px solid #ef8544; color: #172235; }
+.aof-callout p { margin: 16px 0 0; color: #daaf36; font-size: 16px; display: flex; gap: 5px; justify-content: center; align-items: center; }
+
+.aof-why > p {
+  margin: 10px 0 24px;
+  color: #526175;
+  font-size: 18px;
+  text-align: center;
+}
+
+.aof-why h2 { text-align: center; }
+
+.aof-airlines .head h2 span { color: #f06735; }
+.aof-airlines .head p { margin: 10px 0 0; font-size: 18px; color: #5b677c; }
+
+.aof-airlines input {
+  min-width: 320px;
+  border: 2px solid #ef6832;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 16px;
+}
+
+.airline-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.airline-card {
+  background: #fff;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(16, 24, 40, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.airline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(16, 24, 40, 0.12);
+}
+
+.airline-card .logo {
+  height: 116px;
+  border-radius: 8px 8px 0 0;
+  background: #f7f8fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -16px -16px 14px;
+  border-bottom: 1px solid #eceff3;
+  padding: 16px;
+}
+
+.airline-card .logo img {
+  max-width: 150px;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.airline-card h3 { margin: 0 0 6px; font-size: 22px; }
+.airline-card p { margin: 0; color: #5b6679; font-size: 14px; }
+
+@media (max-width: 1200px) {
+  .aof-hero,
+  .aof-deals,
+  .aof-grid-four,
+  .aof-why,
+  .aof-airlines { padding-left: 20px; padding-right: 20px; }
+  .aof-callout { margin-left: 20px; margin-right: 20px; }
+  .aof-hero { grid-template-columns: 1fr; }
+  .aof-hero { grid-template-areas: "content" "art" "form"; }
+  .aof-hero-art { display: none; }
+  .aof-hero h1 { font-size: 36px; }
+  .aof-deals .head h2,
+  .aof-why h2,
+  .aof-airlines .head h2,
+  .aof-callout h2 { font-size: 34px; }
+  .info-card h3 { font-size: 24px; }
+  .info-card p,
+  .aof-why > p,
+  .aof-airlines .head p,
+  .aof-callout p,
+  .deal-card p,
+  .deal-card a,
+  .deal-card h3 { font-size: 16px; }
+  .aof-trip-type button,
+  .aof-service { font-size: 14px; }
+  .aof-search-strip.oneway,
+  .aof-search-strip.roundtrip { grid-template-columns: 1fr; border-radius: 12px; }
+  .aof-search-cell { border-right: none; border-bottom: 1px solid #e2e6ec; }
+  .swap-route-btn {
+    top: auto;
+    right: 18px;
+    bottom: -18px;
+    transform: none;
+  }
+  .swap-route-btn:active {
+    transform: scale(0.96);
+  }
+  .aof-search-btn { min-height: 48px; }
+  .aof-grid-four,
+  .airline-grid { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
+  .aof-deals .cards { grid-template-columns: 1fr; }
+  .aof-deals .nav-btn { display: none; }
+  .aof-airlines .head { flex-direction: column; align-items: stretch; }
+  .aof-airlines input { min-width: 0; width: 100%; }
+}
+
+@media (max-width: 700px) {
+  .aof-hero {
+    padding-top: 18px;
+    padding-bottom: 26px;
+  }
+
+  .aof-hero h1 {
+    display: none;
+  }
+
+  .aof-service-tabs {
+    margin-top: 12px;
+    gap: 10px;
+  }
+
+  .aof-trip-type {
+    margin: 14px 0 -20px;
+    gap: 8px;
+    padding: 0;
+  }
+
+  .trip-radio {
+    gap: 6px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .trip-radio span {
+    gap: 6px;
+  }
+
+  .trip-radio span::before {
+    width: 12px;
+    height: 12px;
+    border-width: 1.5px;
+  }
+
+  .trip-radio:has(input:checked) span::before {
+    background: radial-gradient(circle, #ffffff 0 3px, #f16427 4px);
+  }
+
+  .aof-form-row {
+    margin-top: 0;
+  }
+
+  .aof-search-strip {
+    border-radius: 8px;
+    overflow: visible;
+  }
+
+  .aof-search-cell {
+    min-height: 76px;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .aof-search-cell .airport-input,
+  .aof-search-cell input[type="date"] {
+    font-size: 13px;
+  }
+
+  .aof-date-field {
+    display: none;
+  }
+
+  .aof-search-cell.return-cell {
+    display: none;
+  }
+
+  .mobile-date-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 26px;
+    color: #1f2530;
+  }
+
+  .mobile-date-trigger {
+    width: 100%;
+    flex: 1 1 auto;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #1f2530;
+    padding: 0;
+    min-height: 26px;
+    cursor: pointer;
+  }
+
+  .mobile-date-trigger span {
+    color: #4f5b6d;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .mobile-date-trigger strong {
+    min-width: 0;
+    color: #1f2530;
+    font-size: 13px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .aof-date-popover,
+  .aof-date-popover.single-month {
+    position: fixed;
+    top: 12px;
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-width: none;
+    max-height: calc(100vh - 24px);
+    overflow: auto;
+    transform: none;
+  }
+
+  .aof-calendar-months,
+  .aof-date-popover.single-month .aof-calendar-months {
+    grid-template-columns: 1fr;
+  }
+
+  .aof-calendar-month {
+    width: 100%;
+    padding: 14px 18px 18px;
+  }
+
+  .aof-calendar-month-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .aof-calendar-weekdays span {
+    font-size: 16px;
+  }
+
+  .aof-calendar-day {
+    width: 100%;
+    height: 34px;
+    font-size: 17px;
+  }
+
+  .passenger-trigger {
+    min-height: 46px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .aof-search-btn {
+    min-height: 44px;
+    margin: 5px;
+    border-radius: 6px;
+    gap: 8px;
+    background: linear-gradient(90deg, #f8654b 0%, #ef3d93 100%);
+    box-shadow: none;
+  }
+
+  .aof-search-btn:hover {
+    background: linear-gradient(90deg, #f8654b 0%, #ef3d93 100%);
+  }
+
+  .aof-search-btn::after {
+    content: "Search";
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .aof-service-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .aof-service-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .aof-grid-four,
+  .airline-grid { grid-template-columns: 1fr; }
+  .aof-callout .btns { flex-direction: column; }
+}

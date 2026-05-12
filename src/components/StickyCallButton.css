@@ -1,0 +1,137 @@
+/* ===== STICKY CALL BUTTON ===== */
+.sticky-call-button {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #173f95;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(23, 63, 149, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 260px;
+}
+
+.sticky-call-button:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 12px 28px rgba(23, 63, 149, 0.45);
+}
+
+.call-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  border: 2px solid rgba(23, 63, 149, 0.35);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
+.sticky-call-button .call-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.sticky-call-button .call-label {
+  font-size: 12px;
+  opacity: 1;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.sticky-call-button .call-number {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.sticky-call-button > svg {
+  transform-origin: 50% 50%;
+  animation: sticky-phone-ring 1.5s ease-in-out infinite;
+}
+
+@keyframes sticky-phone-ring {
+  0%, 100% { transform: rotate(0deg); }
+  12% { transform: rotate(16deg); }
+  24% { transform: rotate(-12deg); }
+  36% { transform: rotate(10deg); }
+  48% { transform: rotate(-8deg); }
+  60% { transform: rotate(0deg); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sticky-call-button {
+    bottom: 20px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    padding: 9px 14px;
+    width: min(360px, calc(100vw - 32px));
+    min-width: 0;
+  }
+
+  .sticky-call-button .call-text {
+    display: flex;
+  }
+
+  .sticky-call-button .call-label {
+    font-size: 11px;
+  }
+
+  .sticky-call-button .call-number {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-call-button {
+    bottom: 16px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    padding: 9px 16px;
+    border-radius: 999px;
+    width: min(340px, calc(100vw - 28px));
+    min-width: 0;
+  }
+
+  .sticky-call-button .call-text {
+    display: flex;
+  }
+
+  .call-pulse {
+    inset: -6px;
+  }
+
+  .sticky-call-button .call-label {
+    font-size: 10px;
+  }
+
+  .sticky-call-button .call-number {
+    font-size: 19px;
+    white-space: nowrap;
+  }
+}
