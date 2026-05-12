@@ -1,5 +1,5 @@
 {
-  "name": "SkyFare Travels",
+  "name": "WeGo Fares",
   "version": "1.0.0",
   "description": "Backend API for flight booking website",
   "main": "server.js",
