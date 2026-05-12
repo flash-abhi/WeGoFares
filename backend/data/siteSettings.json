@@ -1,5 +1,5 @@
 {
-  "siteName": "SkyFare",
+  "siteName": "WeGo Fares",
   "tagline": "Lock Your Fare. Unlock Your Journey.",
   "logoUrl": "/logo.png",
   "faviconUrl": "/favicon.ico",
@@ -7,14 +7,14 @@
   "email": "support@wegofares.com",
   "workingHours": "Mon-Sun 24/7",
   "billingAddress": {
-    "company": "SkyFare, Inc.",
+    "company": "WeGo Fares",
     "street": "447 Broadway",
     "city": "New York",
     "state": "NY",
     "zip": "10013",
     "country": "USA"
   },
-  "copyrightText": "© 2006-{year} SkyFare, Inc. All rights reserved.",
+  "copyrightText": "© 2006-{year} WeGo Fares. All rights reserved.",
   "socialLinks": {
     "facebook": "",
     "twitter": "",
