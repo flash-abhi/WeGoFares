@@ -17,7 +17,7 @@ function Privacy() {
         <div className="legal-content">
           <section>
             <h2>1. Information We Collect</h2>
-            <p>At skyfaretravels.com, we collect the following types of information:</p>
+            <p>At wegofares.com, we collect the following types of information:</p>
             <ul>
               <li><strong>Personal Information:</strong> Name, email address, phone number, billing address, and payment information.</li>
               <li><strong>Travel Information:</strong> Passport details, travel dates, preferences, and booking history.</li>
@@ -87,7 +87,7 @@ function Privacy() {
               <li>Object to certain data processing activities</li>
               <li>Request data portability</li>
             </ul>
-            <p>To exercise these rights, contact us at privacy@skyfaretravels.com</p>
+            <p>To exercise these rights, contact us at privacy@wegofares.com</p>
           </section>
 
           <section>
@@ -109,9 +109,9 @@ function Privacy() {
             <h2>10. Contact Us</h2>
             <p>For privacy-related questions or concerns:</p>
             <ul>
-              <li>Email: privacy@skyfaretravels.com</li>
+              <li>Email: privacy@wegofares.com</li>
               <li>Phone: {contactSettings.tfn}</li>
-              <li>Mail: Privacy Department, skyfaretravels.com</li>
+              <li>Mail: Privacy Department, wegofares.com</li>
             </ul>
           </section>
         </div>

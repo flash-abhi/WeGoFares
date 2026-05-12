@@ -52,8 +52,8 @@ function Help() {
                 <Mail size={40} />
                 <h3>Email Support</h3>
                 <p>Get help via email</p>
-                <a href="mailto:support@skyfaretravels.com" className="method-link">
-                  support@skyfaretravels.com
+                <a href="mailto:support@wegofares.com" className="method-link">
+                  support@wegofares.com
                 </a>
                 <span className="availability">Response within 2-4 hours</span>
               </div>

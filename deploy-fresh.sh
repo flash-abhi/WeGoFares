@@ -6,7 +6,7 @@
 set -e  # Exit on any error
 
 VPS_IP="82.29.197.137"
-DOMAIN="skyfaretravels.com"
+DOMAIN="wegofares.com"
 DEPLOY_DIR="/var/www/skyfaretravels"
 PM2_NAME="skyfaretravels-backend"
 BACKEND_PORT=5001
@@ -70,7 +70,7 @@ server {
     root /var/www/lockmyfare/build;
     index index.html;
 
-    server_name skyfaretravels.com www.skyfaretravels.com;
+    server_name wegofares.com www.wegofares.com;
 
     # Gzip compression
     gzip on;

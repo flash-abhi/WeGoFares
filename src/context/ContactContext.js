@@ -10,7 +10,7 @@ export const ContactProvider = ({ children }) => {
     logoUrl: '/logo.svg',
     faviconUrl: '/favicon.ico',
     tfn: '+1-866-699-8687',
-    email: 'support@skyfaretravels.com',
+    email: 'support@wegofares.com',
     workingHours: 'Mon-Sun 24/7',
     billingAddress: {
       company: 'WeGo Fares',
@@ -28,7 +28,7 @@ export const ContactProvider = ({ children }) => {
       footerBg: 'linear-gradient(135deg, #2d3748 0%, #1a202c 100%)',
       footerText: '#e2e8f0'
     },
-    siteUrl: 'https://skyfaretravels.com',
+    siteUrl: 'https://wegofares.com',
     address: '447 Broadway, New York, NY 10013 USA'
   });
   const [loading, setLoading] = useState(true);

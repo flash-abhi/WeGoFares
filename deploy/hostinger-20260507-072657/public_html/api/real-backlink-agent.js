@@ -28,10 +28,10 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 // Configuration
 const config = {
   apiUrl: process.env.API_URL || 'http://localhost:5001',
-  adminEmail: process.env.ADMIN_EMAIL || 'info@skyfaretravels.com',
+  adminEmail: process.env.ADMIN_EMAIL || 'info@wegofares.com',
   adminPassword: process.env.ADMIN_PASSWORD || 'resert',
   
-  siteUrl: process.env.SITE_URL || 'https://skyfaretravels.com',
+  siteUrl: process.env.SITE_URL || 'https://wegofares.com',
   siteName: process.env.SITE_NAME || 'WeGo Fares',
   
   // API credentials (set these in .env)

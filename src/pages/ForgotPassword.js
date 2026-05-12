@@ -104,7 +104,7 @@ function ForgotPassword() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="info@skyfaretravels.com"
+              placeholder="info@wegofares.com"
               required
               disabled={isLoading}
             />

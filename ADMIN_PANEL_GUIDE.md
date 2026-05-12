@@ -127,7 +127,7 @@ Edit all main website content from one place:
   "heroTitle": "Find Your Perfect Flight Deal",
   "heroSubtitle": "Save up to 40% on flights worldwide",
   "aboutText": "Company description...",
-  "contactEmail": "support@skyfaretravels.com",
+  "contactEmail": "support@wegofares.com",
   "contactPhone": "+1-866-699-8687",
   "contactAddress": "447 Broadway, New York, NY 10013 USA"
 }
@@ -191,7 +191,7 @@ const loginResponse = await fetch('http://localhost:5000/api/admin/login', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
-    email: 'info@skyfaretravels.com',
+    email: 'info@wegofares.com',
     password: 'admin123'
   })
 });
@@ -292,7 +292,7 @@ nohup node server.js > server.log 2>&1 &
 
 ### "Invalid credentials"
 **Solution:** Use correct credentials:
-- Email: `info@skyfaretravels.com`
+- Email: `info@wegofares.com`
 - Password: `admin123`
 
 ### Cannot access admin panel

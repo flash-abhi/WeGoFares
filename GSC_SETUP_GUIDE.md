@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide will help you set up **live Google Search Console (GSC)** integration for skyfaretravels.com. Once configured, you'll get **real-time data** from Google Search Console directly in your admin dashboard.
+This guide will help you set up **live Google Search Console (GSC)** integration for wegofares.com. Once configured, you'll get **real-time data** from Google Search Console directly in your admin dashboard.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ This guide will help you set up **live Google Search Console (GSC)** integration
 
 1. Go to https://search.google.com/search-console
 2. Click "Add Property"
-3. Enter your website: `https://skyfaretravels.com`
+3. Enter your website: `https://wegofares.com`
 4. Choose verification method:
    - **DNS verification** (recommended)
    - **HTML file upload**
@@ -74,7 +74,7 @@ This guide will help you set up **live Google Search Console (GSC)** integration
    
    **For Production (VPS):**
    ```
-   https://skyfaretravels.com/api/gsc/oauth2callback
+   https://wegofares.com/api/gsc/oauth2callback
    http://164.92.122.115:5001/api/gsc/oauth2callback
    ```
    
@@ -95,7 +95,7 @@ This guide will help you set up **live Google Search Console (GSC)** integration
 2. **Add Google Credentials**
    ```env
    # Google Search Console Configuration
-   GSC_SITE_URL=https://skyfaretravels.com
+   GSC_SITE_URL=https://wegofares.com
    
    # Replace with your actual values from Google Cloud Console
    GOOGLE_CLIENT_ID=123456789-abcdefghijklmnop.apps.googleusercontent.com
@@ -105,7 +105,7 @@ This guide will help you set up **live Google Search Console (GSC)** integration
 
 3. **For Production VPS, use production URL:**
    ```env
-   GOOGLE_REDIRECT_URI=https://skyfaretravels.com/api/gsc/oauth2callback
+   GOOGLE_REDIRECT_URI=https://wegofares.com/api/gsc/oauth2callback
    ```
 
 4. **Save and exit** (Ctrl+X, Y, Enter)
@@ -131,7 +131,7 @@ pm2 restart all
 
 1. **Login to Admin Panel**
    - Go to: http://localhost:3000/admin/login
-   - Email: `info@skyfaretravels.com`
+   - Email: `info@wegofares.com`
    - Password: `admin123`
 
 2. **Navigate to SEO Tab**
@@ -214,7 +214,7 @@ pm2 restart all
 **Solution**:
 1. Make sure your website has been verified in Search Console
 2. Wait 24-48 hours after verification for data to populate
-3. Check that the site URL in GSC matches exactly: `https://skyfaretravels.com`
+3. Check that the site URL in GSC matches exactly: `https://wegofares.com`
 
 ---
 
@@ -245,12 +245,12 @@ When deploying to VPS:
 
 1. **Update Redirect URI**
    ```env
-   GOOGLE_REDIRECT_URI=https://skyfaretravels.com/api/gsc/oauth2callback
+   GOOGLE_REDIRECT_URI=https://wegofares.com/api/gsc/oauth2callback
    ```
 
 2. **Add Production URI to Google Cloud**
    - Go to OAuth credentials
-   - Add `https://skyfaretravels.com/api/gsc/oauth2callback`
+   - Add `https://wegofares.com/api/gsc/oauth2callback`
 
 3. **Use Environment Variables**
    - Don't hardcode credentials
@@ -320,7 +320,7 @@ When deploying to your VPS (production), you MUST update the redirect URI:
 Go to: https://console.cloud.google.com/apis/credentials
 Select your OAuth 2.0 Client ID
 Under "Authorized redirect URIs", ADD:
-  https://skyfaretravels.com/api/gsc/oauth2callback
+  https://wegofares.com/api/gsc/oauth2callback
 
 Keep the localhost URI for development:
   http://localhost:5001/api/gsc/oauth2callback
@@ -333,7 +333,7 @@ cd /var/www/flight/backend
 nano .env
 
 # Change this line:
-GOOGLE_REDIRECT_URI=https://skyfaretravels.com/api/gsc/oauth2callback
+GOOGLE_REDIRECT_URI=https://wegofares.com/api/gsc/oauth2callback
 
 # Save and exit (Ctrl+X, Y, Enter)
 ```
@@ -346,7 +346,7 @@ pm2 restart all
 ```
 
 **4. Test Connection:**
-- Go to: https://skyfaretravels.com/admin/dashboard
+- Go to: https://wegofares.com/admin/dashboard
 - Click SEO tab
 - Click "Connect Google Search Console"
 - Authorize with your Google account
@@ -381,7 +381,7 @@ cat /var/www/flight/backend/.env | grep GOOGLE
 # Should show:
 # GOOGLE_CLIENT_ID=233092646892-...
 # GOOGLE_CLIENT_SECRET=GOCSPX-...
-# GOOGLE_REDIRECT_URI=https://skyfaretravels.com/api/gsc/oauth2callback
+# GOOGLE_REDIRECT_URI=https://wegofares.com/api/gsc/oauth2callback
 
 # 2. Check backend is running
 pm2 status

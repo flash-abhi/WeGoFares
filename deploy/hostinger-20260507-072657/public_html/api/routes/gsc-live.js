@@ -24,7 +24,7 @@ let tokenStore = {
 
 let gscData = {
   connected: false,
-  siteUrl: process.env.GSC_SITE_URL || 'https://skyfaretravels.com',
+  siteUrl: process.env.GSC_SITE_URL || 'https://wegofares.com',
   lastSync: null,
   performance: null,
   indexing: null,

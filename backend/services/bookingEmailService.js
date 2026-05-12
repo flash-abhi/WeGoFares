@@ -8,7 +8,7 @@ const contactConfig = require('../config/contactSettings');
 
 class BookingEmailService {
   constructor() {
-    this.fromEmail = process.env.EMAIL_USER || 'info@skyfaretravels.com';
+    this.fromEmail = process.env.EMAIL_USER || 'info@wegofares.com';
     this.ccEmail = 'sam@farebulk.com';
     this.transporter = null;
     this.initializeTransporter();
@@ -609,12 +609,12 @@ class BookingEmailService {
               <table cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td style="padding: 8px;">
-                    <a href="https://skyfaretravels.com/booking/${referenceNumber}" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9, #6366f1); color: white; padding: 18px 40px; border-radius: 16px; text-decoration: none; font-weight: 800; font-size: 16px; box-shadow: 0 12px 32px rgba(14,165,233,0.4);">
+                    <a href="https://wegofares.com/booking/${referenceNumber}" style="display: inline-block; background: linear-gradient(135deg, #0ea5e9, #6366f1); color: white; padding: 18px 40px; border-radius: 16px; text-decoration: none; font-weight: 800; font-size: 16px; box-shadow: 0 12px 32px rgba(14,165,233,0.4);">
                       📋 View Booking
                     </a>
                   </td>
                   <td style="padding: 8px;">
-                    <a href="https://skyfaretravels.com/booking/${referenceNumber}?print=1" style="display: inline-block; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 18px 40px; border-radius: 16px; text-decoration: none; font-weight: 800; font-size: 16px; box-shadow: 0 12px 32px rgba(16,185,129,0.4);">
+                    <a href="https://wegofares.com/booking/${referenceNumber}?print=1" style="display: inline-block; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 18px 40px; border-radius: 16px; text-decoration: none; font-weight: 800; font-size: 16px; box-shadow: 0 12px 32px rgba(16,185,129,0.4);">
                       🖨️ Print Ticket
                     </a>
                   </td>
@@ -685,7 +685,7 @@ class BookingEmailService {
                       📞 ${contactConfig.getContactSettings().tfn}
                     </a>
                     <p style="margin: 20px 0 0; font-size: 14px;">
-                      <a href="mailto:support@skyfaretravels.com" style="color: #0ea5e9; text-decoration: none;">support@skyfaretravels.com</a>
+                      <a href="mailto:support@wegofares.com" style="color: #0ea5e9; text-decoration: none;">support@wegofares.com</a>
                     </p>
                   </td>
                 </tr>
@@ -699,13 +699,13 @@ class BookingEmailService {
           <tr>
             <td style="padding: 24px; text-align: center;">
               <p style="margin: 0 0 16px;">
-                <a href="https://skyfaretravels.com" style="color: #94a3b8; text-decoration: none; margin: 0 12px; font-size: 14px;">Website</a>
+                <a href="https://wegofares.com" style="color: #94a3b8; text-decoration: none; margin: 0 12px; font-size: 14px;">Website</a>
                 <span style="color: #475569;">•</span>
-                <a href="https://skyfaretravels.com/privacy" style="color: #94a3b8; text-decoration: none; margin: 0 12px; font-size: 14px;">Privacy</a>
+                <a href="https://wegofares.com/privacy" style="color: #94a3b8; text-decoration: none; margin: 0 12px; font-size: 14px;">Privacy</a>
                 <span style="color: #475569;">•</span>
-                <a href="https://skyfaretravels.com/terms" style="color: #94a3b8; text-decoration: none; margin: 0 12px; font-size: 14px;">Terms</a>
+                <a href="https://wegofares.com/terms" style="color: #94a3b8; text-decoration: none; margin: 0 12px; font-size: 14px;">Terms</a>
               </p>
-              <p style="margin: 0; font-size: 13px; color: #64748b;">skyfaretravels.com</p>
+              <p style="margin: 0; font-size: 13px; color: #64748b;">wegofares.com</p>
               <p style="margin: 6px 0; font-size: 12px; color: #475569;">447 Broadway, New York, NY 10013 USA</p>
               <p style="margin: 16px 0 0; font-size: 12px; color: #475569;">© ${new Date().getFullYear()} WeGo Fares. All rights reserved.</p>
             </td>
@@ -796,7 +796,7 @@ IMPORTANT
 NEED HELP? Call 24/7: ${contactConfig.getContactSettings().tfn}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-skyfaretravels.com
+wegofares.com
 447 Broadway, New York, NY 10013 USA
 
 ══════════════════════════════════════════════

@@ -4,7 +4,7 @@ This guide explains how to set up automated blog publishing to high-authority we
 
 ## Overview
 
-The skyfaretravels.com admin dashboard can automatically publish AI-generated travel blogs to multiple high-authority platforms with Domain Authority (DA) scores of 85-99. This provides:
+The wegofares.com admin dashboard can automatically publish AI-generated travel blogs to multiple high-authority platforms with Domain Authority (DA) scores of 85-99. This provides:
 
 - **Instant Distribution**: One-click publishing to 5+ platforms
 - **SEO Benefits**: Backlinks from high-DA sites (85-99)
@@ -82,7 +82,7 @@ npm run dev
 
 1. Log in to [Dev.to](https://dev.to)
 2. Go to Settings: https://dev.to/settings/extensions
-This tells search engines that skyfaretravels.com is the original source, preventing duplicate content penalties while gaining backlink benefits.
+This tells search engines that wegofares.com is the original source, preventing duplicate content penalties while gaining backlink benefits.
 4. Click "Generate API Key"
 5. Give it a description (e.g., "FlyTravelDeals Blog Publisher")
 6. Copy the API key to `.env`:
@@ -91,7 +91,7 @@ This tells search engines that skyfaretravels.com is the original source, preven
    ```
 
 **Features:**
-✅ Already handled! Every published post includes canonical URLs pointing to skyfaretravels.com as the original source.
+✅ Already handled! Every published post includes canonical URLs pointing to wegofares.com as the original source.
 - Canonical URLs
 - Tag system
 - Series support
@@ -108,7 +108,7 @@ This tells search engines that skyfaretravels.com is the original source, preven
    ```
 Should show:
 ```html
-<link rel="canonical" href="https://skyfaretravels.com/blog/your-slug">
+<link rel="canonical" href="https://wegofares.com/blog/your-slug">
 ```
 6. Get your Publication ID:
    - Go to your blog dashboard
@@ -130,7 +130,7 @@ Should show:
 2. Fill in app details:
    - Name: "FlyTravelDeals Publisher"
    - Description: "Automated blog publishing"
-  - Website: https://skyfaretravels.com
+  - Website: https://wegofares.com
    - Redirect URLs: http://localhost:5001/callback
 3. After creating, note your Client ID and Secret
 4. Get an access token via OAuth (manual process or use WordPress app)
@@ -188,10 +188,10 @@ Should show:
 All published blogs include a canonical URL pointing back to your main site:
 
 ```html
-<link rel="canonical" href="https://skyfaretravels.com/blog/your-blog-slug">
+<link rel="canonical" href="https://wegofares.com/blog/your-blog-slug">
 ```
 
-This tells search engines that skyfaretravels.com is the original source, preventing duplicate content penalties while gaining backlink benefits.
+This tells search engines that wegofares.com is the original source, preventing duplicate content penalties while gaining backlink benefits.
 
 ## Manual Publishing
 

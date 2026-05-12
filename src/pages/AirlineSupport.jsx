@@ -19,7 +19,7 @@ const AirlineSupport = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "WeGo Fares Support",
-            "url": "https://skyfaretravels.com/",
+            "url": "https://wegofares.com/",
             "contactPoint": [
               {
                 "@type": "ContactPoint",

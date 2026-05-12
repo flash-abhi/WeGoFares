@@ -595,10 +595,10 @@ class PlatformIntegrations {
     // This is a template - actual implementation depends on each directory's structure
     const defaultInfo = {
       businessName: process.env.SITE_NAME || 'WeGo Fares',
-      website: process.env.SITE_URL || 'https://skyfaretravels.com',
+      website: process.env.SITE_URL || 'https://wegofares.com',
       description: 'Best flight deals, hotels, cruises, and vacation packages. Save up to 70% on travel.',
       category: 'Travel',
-      email: process.env.CONTACT_EMAIL || 'info@skyfaretravels.com',
+      email: process.env.CONTACT_EMAIL || 'info@wegofares.com',
       phone: process.env.CONTACT_PHONE || '',
       address: process.env.BUSINESS_ADDRESS || '',
       ...businessInfo

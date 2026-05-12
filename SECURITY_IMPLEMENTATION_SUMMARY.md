@@ -2,7 +2,7 @@
 
 ## What Was Added
 
-I've implemented a comprehensive security and phishing detection system for skyfaretravels.com admin panel. This addresses the "Possible Phishing Detected on User Login" concern with enterprise-grade security features.
+I've implemented a comprehensive security and phishing detection system for wegofares.com admin panel. This addresses the "Possible Phishing Detected on User Login" concern with enterprise-grade security features.
 
 ## ✅ Completed Features
 
@@ -151,7 +151,7 @@ Access: Admin Panel → Security Tab
 ### For Users (Testing):
 
 1. **Normal Login**: 
-   - Email: `info@skyfaretravels.com`
+   - Email: `info@wegofares.com`
    - Password: `admin123`
    - ✅ Should succeed
 
@@ -208,7 +208,7 @@ EMAIL_PROVIDER=smtp
 SMTP_HOST=smtp.gmail.com
 SMTP_USER=your-email
 SMTP_PASS=your-password
-ADMIN_EMAILS=info@skyfaretravels.com
+ADMIN_EMAILS=info@wegofares.com
 ```
 
 ### Customizable Settings (in code):
@@ -354,7 +354,7 @@ Score = 0
 ## 📞 Support
 
 For questions:
-- **Email**: security@skyfaretravels.com
+- **Email**: security@wegofares.com
 - **Phone**: +1-866-699-8687
 - **Docs**: See `SECURITY_SYSTEM.md`
 

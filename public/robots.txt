@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://skyfaretravels.com/sitemap.xml
+Sitemap: https://wegofares.com/sitemap.xml

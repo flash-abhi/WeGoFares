@@ -29,4 +29,4 @@ echo "🌐 Reloading Nginx..."
 sudo systemctl reload nginx
 
 echo "✅ Deployment complete!"
-echo "🌍 Your app is live at http://skyfaretravels.com"
+echo "🌍 Your app is live at http://wegofares.com"

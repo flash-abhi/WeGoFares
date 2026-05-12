@@ -35,7 +35,7 @@ sudo systemctl reload nginx
 
 echo ""
 echo "✅ Update complete!"
-echo "🌍 Your changes are now live at https://skyfaretravels.com"
+echo "🌍 Your changes are now live at https://wegofares.com"
 echo ""
 echo "Quick checks:"
 pm2 status

@@ -17,7 +17,7 @@ function Terms() {
         <div className="legal-content">
           <section>
             <h2>1. Acceptance of Terms</h2>
-            <p>By accessing and using skyfaretravels.com, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.</p>
+            <p>By accessing and using wegofares.com, you accept and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.</p>
           </section>
 
           <section>
@@ -45,7 +45,7 @@ function Terms() {
             <ul>
               <li>Cancellation terms vary by service provider (airline, hotel, cruise line).</li>
               <li>Some bookings may be non-refundable or subject to cancellation fees.</li>
-              <li>Cancellation requests must be submitted in writing to support@skyfaretravels.com</li>
+              <li>Cancellation requests must be submitted in writing to support@wegofares.com</li>
               <li>Processing time for refunds may take 7-14 business days.</li>
             </ul>
             
@@ -64,7 +64,7 @@ function Terms() {
               <li>Check entry requirements for your destination country well in advance.</li>
               <li>Ensure your passport is valid for at least 6 months beyond your return date.</li>
               <li>Verify COVID-19 or other health requirements for travel.</li>
-              <li>skyfaretravels.com is not responsible for denied boarding due to invalid documents.</li>
+              <li>wegofares.com is not responsible for denied boarding due to invalid documents.</li>
             </ul>
           </section>
 
@@ -98,7 +98,7 @@ function Terms() {
 
             <section>
               <h2>7. Intellectual Property</h2>
-              <p>All content on skyfaretravels.com, including text, graphics, logos, and software, is our property or licensed to us. You may not reproduce, distribute, or create derivative works without written permission.</p>
+              <p>All content on wegofares.com, including text, graphics, logos, and software, is our property or licensed to us. You may not reproduce, distribute, or create derivative works without written permission.</p>
             </section>
 
           <section>
@@ -111,7 +111,7 @@ function Terms() {
             <p>Our 24/7 customer support is available at:</p>
             <ul>
               <li>Phone: {contactSettings.tfn}</li>
-              <li>Email: support@skyfaretravels.com</li>
+              <li>Email: support@wegofares.com</li>
             </ul>
           </section>
 
@@ -129,7 +129,7 @@ function Terms() {
             <h2>12. Contact Information</h2>
             <p>For questions about these terms:</p>
             <ul>
-              <li>Email: legal@skyfaretravels.com</li>
+              <li>Email: legal@wegofares.com</li>
               <li>Phone: {contactSettings.tfn}</li>
             </ul>
           </section>

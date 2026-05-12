@@ -5,7 +5,7 @@
 
 let contactSettings = {
   tfn: '+1-866-699-8687',
-  email: 'info@skyfaretravels.com',
+  email: 'info@wegofares.com',
   address: '447 Broadway, New York, NY 10013 USA',
   workingHours: 'Mon-Sun 24/7'
 };

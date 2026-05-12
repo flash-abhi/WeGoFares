@@ -19,7 +19,7 @@ const defaults = {
   
   // Contact
   tfn: '+1-888-859-0441',
-  email: 'support@skyfaretravels.com',
+  email: 'support@wegofares.com',
   workingHours: 'Mon-Sun 24/7',
   
   // Billing / Business Address
@@ -52,7 +52,7 @@ const defaults = {
   },
 
   // SEO
-  siteUrl: 'https://skyfaretravels.com'
+  siteUrl: 'https://wegofares.com'
 };
 
 let siteSettings = { ...defaults };

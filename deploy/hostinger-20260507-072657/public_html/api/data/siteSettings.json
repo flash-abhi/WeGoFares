@@ -4,7 +4,7 @@
   "logoUrl": "/logo.png",
   "faviconUrl": "/favicon.ico",
   "tfn": "+1-888-859-0441",
-  "email": "support@skyfaretravels.com",
+  "email": "support@wegofares.com",
   "workingHours": "Mon-Sun 24/7",
   "billingAddress": {
     "company": "WeGo Fares",
@@ -27,5 +27,5 @@
     "footerBg": "#eaecff",
     "footerText": "#2a2b2c"
   },
-  "siteUrl": "https://skyfaretravels.com"
+  "siteUrl": "https://wegofares.com"
 }

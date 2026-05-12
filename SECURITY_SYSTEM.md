@@ -2,7 +2,7 @@
 
 ## Overview
 
-LockMyFare (skyfaretravels.com) now includes a comprehensive security system to protect against phishing attempts, brute force attacks, and unauthorized access. The system provides real-time monitoring, automatic IP blocking, CAPTCHA challenges, and email alerts.
+LockMyFare (wegofares.com) now includes a comprehensive security system to protect against phishing attempts, brute force attacks, and unauthorized access. The system provides real-time monitoring, automatic IP blocking, CAPTCHA challenges, and email alerts.
 
 ## Table of Contents
 
@@ -185,7 +185,7 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
-ADMIN_EMAILS=info@skyfaretravels.com
+ADMIN_EMAILS=info@wegofares.com
 ```
 
 ### 3. CAPTCHA Setup (Optional)
@@ -362,7 +362,7 @@ Login with security checks
 **Request:**
 ```json
 {
-   "email": "info@skyfaretravels.com",
+   "email": "info@wegofares.com",
   "password": "admin123",
   "captchaToken": "optional-captcha-token"
 }
@@ -376,7 +376,7 @@ Login with security checks
   "admin": {
     "id": 1,
     "name": "Admin",
-   "email": "info@skyfaretravels.com"
+   "email": "info@wegofares.com"
   },
   "security": {
     "suspiciousScore": 0,
@@ -584,14 +584,14 @@ Sent when: Multiple failed attempts for same account
 
 1. **Normal Login**
    ```
-   Email: info@skyfaretravels.com
+   Email: info@wegofares.com
    Password: admin123
    Expected: Success
    ```
 
 2. **Failed Login**
    ```
-   Email: info@skyfaretravels.com
+   Email: info@wegofares.com
    Password: wrongpassword
    Expected: Failure, counter increases
    ```
@@ -690,7 +690,7 @@ Sent when: Multiple failed attempts for same account
 ## Support
 
 For questions or issues:
-- **Email**: security@skyfaretravels.com
+- **Email**: security@wegofares.com
 - **Phone**: +1-866-699-8687
 - **Documentation**: Check IMPLEMENTATION_SUMMARY.md
 

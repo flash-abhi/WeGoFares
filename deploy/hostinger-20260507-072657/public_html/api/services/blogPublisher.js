@@ -95,7 +95,7 @@ class BlogPublisherService {
         content: content,
         tags: blogPost.tags.slice(0, 5), // Medium allows max 5 tags
         publishStatus: 'public',
-        canonicalUrl: `https://skyfaretravels.com/blog/${blogPost.slug}`
+        canonicalUrl: `https://wegofares.com/blog/${blogPost.slug}`
       },
       {
         headers: {
@@ -123,7 +123,7 @@ class BlogPublisherService {
           published: true,
           body_markdown: blogPost.content,
           tags: blogPost.tags.slice(0, 4).map(tag => tag.toLowerCase().replace(/\s+/g, '')),
-          canonical_url: `https://skyfaretravels.com/blog/${blogPost.slug}`,
+          canonical_url: `https://wegofares.com/blog/${blogPost.slug}`,
           description: blogPost.excerpt
         }
       },
@@ -254,7 +254,7 @@ class BlogPublisherService {
 
   convertToMediumFormat(content) {
     // Add canonical link at the bottom
-    return content + '\n\n---\n\n*Originally published at [skyfaretravels.com](https://skyfaretravels.com)*';
+    return content + '\n\n---\n\n*Originally published at [wegofares.com](https://wegofares.com)*';
   }
 
   convertMarkdownToHTML(markdown) {
@@ -295,21 +295,21 @@ class BlogPublisherService {
             name: 'Medium',
             da: 95,
             url: 'https://medium.com/new-story',
-            instructions: 'Copy content and paste. Add canonical URL to skyfaretravels.com',
-            canonicalUrl: `https://skyfaretravels.com/blog/${blogPost.slug}`
+            instructions: 'Copy content and paste. Add canonical URL to wegofares.com',
+            canonicalUrl: `https://wegofares.com/blog/${blogPost.slug}`
           },
           {
             name: 'Dev.to',
             da: 90,
             url: 'https://dev.to/new',
             instructions: 'Create new post, paste markdown content, add canonical URL',
-            canonicalUrl: `https://skyfaretravels.com/blog/${blogPost.slug}`
+            canonicalUrl: `https://wegofares.com/blog/${blogPost.slug}`
           },
           {
             name: 'LinkedIn Articles',
             da: 98,
             url: 'https://www.linkedin.com/post/new',
-            instructions: 'Write article, paste content, link back to skyfaretravels.com'
+            instructions: 'Write article, paste content, link back to wegofares.com'
           },
           {
             name: 'Hashnode',
@@ -342,7 +342,7 @@ class BlogPublisherService {
           excerpt: blogPost.excerpt,
           tags: blogPost.tags,
           image: blogPost.image,
-          canonicalUrl: `https://skyfaretravels.com/blog/${blogPost.slug}`
+          canonicalUrl: `https://wegofares.com/blog/${blogPost.slug}`
         }
       }
     };

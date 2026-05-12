@@ -36,7 +36,7 @@ router.post('/request', async (req, res) => {
     console.log('📧 Password reset request received for:', email);
 
     // Validate email
-    if (!email || email !== 'info@skyfaretravels.com') {
+    if (!email || email !== 'info@wegofares.com') {
       console.log('❌ Email validation failed:', email);
       return res.status(404).json({
         success: false,
@@ -55,7 +55,7 @@ router.post('/request', async (req, res) => {
     });
 
     // Create reset link - use production URL
-    const baseUrl = process.env.SITE_URL || 'https://skyfaretravels.com';
+    const baseUrl = process.env.SITE_URL || 'https://wegofares.com';
     const resetLink = `${baseUrl}/admin/reset-password?token=${resetToken}&email=${encodeURIComponent(email)}`;
 
     // Email content

@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://skyfaretravels.com/</loc>
+    <loc>https://wegofares.com/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://skyfaretravels.com/flights</loc>
+    <loc>https://wegofares.com/flights</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://skyfaretravels.com/hotels</loc>
+    <loc>https://wegofares.com/hotels</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://skyfaretravels.com/packages</loc>
+    <loc>https://wegofares.com/packages</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://skyfaretravels.com/airlines</loc>
+    <loc>https://wegofares.com/airlines</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://skyfaretravels.com/about</loc>
+    <loc>https://wegofares.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://skyfaretravels.com/contact</loc>
+    <loc>https://wegofares.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
