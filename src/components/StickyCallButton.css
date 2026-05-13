@@ -71,6 +71,12 @@
   animation: sticky-phone-ring 1.5s ease-in-out infinite;
 }
 
+@media (min-width: 769px) {
+  .sticky-call-button {
+    display: none;
+  }
+}
+
 @keyframes sticky-phone-ring {
   0%, 100% { transform: rotate(0deg); }
   12% { transform: rotate(16deg); }
