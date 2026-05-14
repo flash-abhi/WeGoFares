@@ -407,40 +407,49 @@ function HomeNew() {
       <section className="aof-hero">
         <div className="aof-hero-content">
           <h1>
-            Your Perfect Deal is Just a Call Away! <span>{phone}</span> 24/7 Support!
+            Your Perfect Deal is Just a Call Away! <span>{phone}</span> 24/7
+            Support!
           </h1>
 
           <div className="aof-service-tabs">
-            <button className={`aof-service ${activeTab === 'flights' ? 'active' : ''}`} onClick={() => setActiveTab('flights')}>
-              <span className="aof-service-icon"><Plane size={24} /></span>
+            <button
+              className={`aof-service ${activeTab === "flights" ? "active" : ""}`}
+              onClick={() => setActiveTab("flights")}
+            >
+              <span className="aof-service-icon">
+                <Plane size={24} />
+              </span>
               <span>Flights</span>
             </button>
-            <button className={`aof-service ${activeTab === 'hotels' ? 'active' : ''}`} onClick={() => navigate('/hotels')}>
-              <span className="aof-service-icon"><Hotel size={24} /></span>
+            <button
+              className={`aof-service ${activeTab === "hotels" ? "active" : ""}`}
+              onClick={() => navigate("/hotels")}
+            >
+              <span className="aof-service-icon">
+                <Hotel size={24} />
+              </span>
               <span>Hotels</span>
             </button>
-            
           </div>
 
           <div className="aof-trip-type">
             <label className="trip-radio">
               <input
                 type="radio"
-                checked={tripType === 'oneway'}
-                onChange={() => setTripType('oneway')}
+                checked={tripType === "oneway"}
+                onChange={() => setTripType("oneway")}
               />
               <span>One-way</span>
             </label>
             <label className="trip-radio">
               <input
                 type="radio"
-                checked={tripType === 'roundtrip'}
-                onChange={() => setTripType('roundtrip')}
+                checked={tripType === "roundtrip"}
+                onChange={() => setTripType("roundtrip")}
               />
               <span>Round-trip</span>
             </label>
           </div>
-
         </div>
         <div className="aof-hero-art">
           <div className="slice s1" />
@@ -448,12 +457,16 @@ function HomeNew() {
           <div className="slice s3" />
         </div>
         <div className="aof-form-row">
-          <div className={`aof-search-strip ${tripType === 'roundtrip' ? 'roundtrip' : 'oneway'}`}>
+          <div
+            className={`aof-search-strip ${tripType === "roundtrip" ? "roundtrip" : "oneway"}`}
+          >
             <div className="aof-search-cell from-cell">
               <Plane size={18} />
               <AirportAutocomplete
                 value={searchData.from}
-                onChange={(value) => setSearchData({ ...searchData, from: value })}
+                onChange={(value) =>
+                  setSearchData({ ...searchData, from: value })
+                }
                 placeholder="From?"
               />
               <button
@@ -470,7 +483,9 @@ function HomeNew() {
               <Plane size={18} />
               <AirportAutocomplete
                 value={searchData.to}
-                onChange={(value) => setSearchData({ ...searchData, to: value })}
+                onChange={(value) =>
+                  setSearchData({ ...searchData, to: value })
+                }
                 placeholder="To?"
               />
             </div>
@@ -478,15 +493,24 @@ function HomeNew() {
               <Calendar size={18} />
               <button
                 type="button"
-                className={`aof-date-field ${tripType === 'oneway' ? 'single-date-field' : ''}`}
-                onClick={() => openCalendar('depart')}
+                className={`aof-date-field ${tripType === "oneway" ? "single-date-field" : ""}`}
+                onClick={() => openCalendar("depart")}
               >
-                {tripType === 'oneway' ? (
-                  <strong>{hasUserSelectedDate ? formatSelectedDate(searchData.departDate, 'Select dates') : 'Select dates'}</strong>
+                {tripType === "oneway" ? (
+                  <strong>
+                    {hasUserSelectedDate
+                      ? formatSelectedDate(
+                          searchData.departDate,
+                          "Select dates",
+                        )
+                      : "Select dates"}
+                  </strong>
                 ) : (
                   <>
                     <span>Depart</span>
-                    <strong>{formatSelectedDate(searchData.departDate, 'Select')}</strong>
+                    <strong>
+                      {formatSelectedDate(searchData.departDate, "Select")}
+                    </strong>
                   </>
                 )}
               </button>
@@ -495,54 +519,91 @@ function HomeNew() {
                   role="button"
                   tabIndex={0}
                   className="mobile-date-trigger single-mobile-date"
-                  onClick={() => openCalendar('depart')}
+                  onClick={() => openCalendar("depart")}
                   onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
+                    if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
-                      openCalendar('depart');
+                      openCalendar("depart");
                     }
                   }}
                 >
-                  <strong>{formatMobileDateText(searchData.departDate, searchData.returnDate, tripType, hasUserSelectedDate)}</strong>
+                  <strong>
+                    {formatMobileDateText(
+                      searchData.departDate,
+                      searchData.returnDate,
+                      tripType,
+                      hasUserSelectedDate,
+                    )}
+                  </strong>
                 </div>
               </div>
               {showDatePicker && (
-                <div className={`aof-date-popover ${tripType === 'roundtrip' ? 'double-month' : 'single-month'}`} ref={datePickerRef}>
+                <div
+                  className={`aof-date-popover ${tripType === "roundtrip" ? "double-month" : "single-month"}`}
+                  ref={datePickerRef}
+                >
                   <div className="aof-calendar-header">
                     <div className="aof-calendar-nav">
-                      <button type="button" onClick={() => setCalendarMonth((prev) => addMonths(prev, -12))} aria-label="Previous year">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setCalendarMonth((prev) => addMonths(prev, -12))
+                        }
+                        aria-label="Previous year"
+                      >
                         &laquo;
                       </button>
-                      <button type="button" onClick={() => setCalendarMonth((prev) => addMonths(prev, -1))} aria-label="Previous month">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setCalendarMonth((prev) => addMonths(prev, -1))
+                        }
+                        aria-label="Previous month"
+                      >
                         &lsaquo;
                       </button>
                     </div>
                     <div className="aof-calendar-nav right">
-                      <button type="button" onClick={() => setCalendarMonth((prev) => addMonths(prev, 1))} aria-label="Next month">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setCalendarMonth((prev) => addMonths(prev, 1))
+                        }
+                        aria-label="Next month"
+                      >
                         &rsaquo;
                       </button>
-                      <button type="button" onClick={() => setCalendarMonth((prev) => addMonths(prev, 12))} aria-label="Next year">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setCalendarMonth((prev) => addMonths(prev, 12))
+                        }
+                        aria-label="Next year"
+                      >
                         &raquo;
                       </button>
                     </div>
                   </div>
                   <div className="aof-calendar-months">
                     {renderCalendarMonth(calendarMonth)}
-                    {tripType === 'roundtrip' && renderCalendarMonth(addMonths(calendarMonth, 1))}
+                    {tripType === "roundtrip" &&
+                      renderCalendarMonth(addMonths(calendarMonth, 1))}
                   </div>
                 </div>
               )}
             </div>
-            {tripType === 'roundtrip' && (
+            {tripType === "roundtrip" && (
               <div className="aof-search-cell return-cell">
                 <Calendar size={18} />
                 <button
                   type="button"
                   className="aof-date-field"
-                  onClick={() => openCalendar('return')}
+                  onClick={() => openCalendar("return")}
                 >
                   <span>Return</span>
-                  <strong>{formatSelectedDate(searchData.returnDate, 'Select')}</strong>
+                  <strong>
+                    {formatSelectedDate(searchData.returnDate, "Select")}
+                  </strong>
                 </button>
               </div>
             )}
@@ -553,24 +614,52 @@ function HomeNew() {
                 onClick={() => setShowPassengers((prev) => !prev)}
               >
                 <Users size={18} />
-                <span>{totalTravelers} Passenger, {searchData.cabinClass.toUpperCase()}</span>
-                <ChevronDown size={16} className={showPassengers ? 'open' : ''} />
+                <span>
+                  {totalTravelers} Passenger,{" "}
+                  {searchData.cabinClass.toUpperCase()}
+                </span>
+                <ChevronDown
+                  size={16}
+                  className={showPassengers ? "open" : ""}
+                />
               </button>
               {showPassengers && (
-                <div className="aof-passenger-dropdown" onClick={(e) => e.stopPropagation()}>
-                  {['adults', 'children', 'infants'].map((k) => (
+                <div
+                  className="aof-passenger-dropdown"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {["adults", "children", "infants"].map((k) => (
                     <div key={k} className="row">
                       <span>{k[0].toUpperCase() + k.slice(1)}</span>
                       <div>
-                        <button type="button" onClick={() => updatePassengers(k, searchData.passengers[k] - 1)}>-</button>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            updatePassengers(k, searchData.passengers[k] - 1)
+                          }
+                        >
+                          -
+                        </button>
                         <strong>{searchData.passengers[k]}</strong>
-                        <button type="button" onClick={() => updatePassengers(k, searchData.passengers[k] + 1)}>+</button>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            updatePassengers(k, searchData.passengers[k] + 1)
+                          }
+                        >
+                          +
+                        </button>
                       </div>
                     </div>
                   ))}
                   <select
                     value={searchData.cabinClass}
-                    onChange={(e) => setSearchData({ ...searchData, cabinClass: e.target.value })}
+                    onChange={(e) =>
+                      setSearchData({
+                        ...searchData,
+                        cabinClass: e.target.value,
+                      })
+                    }
                   >
                     <option value="economy">Economy</option>
                     <option value="premium_economy">Premium Economy</option>
@@ -590,34 +679,44 @@ function HomeNew() {
       <section className="aof-deals">
         <div className="head">
           <h2>Get Best Travel deals</h2>
-          <button>Explore more <ArrowRight size={18} /></button>
+          <button>
+            Explore more <ArrowRight size={18} />
+          </button>
         </div>
         <div className="cards-wrap">
           <button
             className="nav-btn left"
-            onClick={() => setDealsStart((prev) => (prev - 1 + dealCards.length) % dealCards.length)}
+            onClick={() =>
+              setDealsStart(
+                (prev) => (prev - 1 + dealCards.length) % dealCards.length,
+              )
+            }
             aria-label="Previous deals"
           >
             <ArrowLeft size={20} />
           </button>
           <div className="cards">
-          {visibleDeals.map((d) => (
-            <article key={d.city} className="deal-card">
-              <img src={d.image} alt={d.city} />
-              <div className="body">
-                <h3>{d.city}</h3>
-                <p>{d.duration}</p>
-                <p>{d.dates}</p>
-                <div>
-                <a href={`tel:${dialPhone}`}><Phone size={15} /> Call Us</a>
+            {visibleDeals.map((d) => (
+              <article key={d.city} className="deal-card">
+                <img src={d.image} alt={d.city} />
+                <div className="body">
+                  <h3>{d.city}</h3>
+                  <p>{d.duration}</p>
+                  <p>{d.dates}</p>
+                  <div>
+                    <a href={`tel:${dialPhone}`}>
+                      <Phone size={15} /> Call Us
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
           </div>
           <button
             className="nav-btn right"
-            onClick={() => setDealsStart((prev) => (prev + 1) % dealCards.length)}
+            onClick={() =>
+              setDealsStart((prev) => (prev + 1) % dealCards.length)
+            }
             aria-label="Next deals"
           >
             <ArrowRight size={20} />
@@ -628,7 +727,9 @@ function HomeNew() {
       <section className="aof-grid-four">
         {coreValues.map((v) => (
           <article key={v.title} className="info-card">
-            <div className={`icon ${v.tone}`}><v.icon size={22} /></div>
+            <div className={`icon ${v.tone}`}>
+              <v.icon size={22} />
+            </div>
             <h3>{v.title}</h3>
             <p>{v.text}</p>
           </article>
@@ -638,19 +739,31 @@ function HomeNew() {
       <section className="aof-callout">
         <h2>Ready to Book Your Flight?</h2>
         <div className="btns">
-          <a href={`tel:${dialPhone}`} className="primary"><Phone size={16} /> Call Now</a>
-          <a href={`tel:${dialPhone}`} className="outline">{phone}</a>
+          <a href={`tel:${dialPhone}`} className="primary">
+            <Phone size={16} /> Call Now
+          </a>
+          <a href={`tel:${dialPhone}`} className="outline">
+            {phone}
+          </a>
         </div>
-        <p><Star size={14} fill="currentColor" /> <Star size={14} fill="currentColor" /> <Star size={14} fill="currentColor" /> <Star size={14} fill="currentColor" /> <Star size={14} fill="currentColor" /> 2M+ Happy Customers</p>
+        <p>
+          <Star size={14} fill="currentColor" />{" "}
+          <Star size={14} fill="currentColor" />{" "}
+          <Star size={14} fill="currentColor" />{" "}
+          <Star size={14} fill="currentColor" />{" "}
+          <Star size={14} fill="currentColor" /> 2M+ Happy Customers
+        </p>
       </section>
 
       <section className="aof-why">
-        <h2>Why Choose airtravelofare?</h2>
+        <h2>Why Choose WeGofare?</h2>
         <p>Experience the difference with our premium flight booking service</p>
         <div className="aof-grid-four">
           {whyChoose.map((v) => (
             <article key={v.title} className="info-card">
-              <div className={`icon ${v.tone}`}><v.icon size={30} /></div>
+              <div className={`icon ${v.tone}`}>
+                <v.icon size={30} />
+              </div>
               <h3>{v.title}</h3>
               <p>{v.text}</p>
             </article>
@@ -661,8 +774,13 @@ function HomeNew() {
       <section className="aof-airlines">
         <div className="head">
           <div>
-            <h2>Choose from <span>600+</span> Airlines Worldwide</h2>
-            <p>Find the perfect airline for your journey with competitive prices and excellent service</p>
+            <h2>
+              Choose from <span>600+</span> Airlines Worldwide
+            </h2>
+            <p>
+              Find the perfect airline for your journey with competitive prices
+              and excellent service
+            </p>
           </div>
           <input
             placeholder="Search airlines..."
@@ -672,7 +790,11 @@ function HomeNew() {
         </div>
         <div className="airline-grid">
           {filteredAirlines.map((airline) => (
-            <article key={airline.name} className="airline-card" onClick={() => navigate('/airlines')}>
+            <article
+              key={airline.name}
+              className="airline-card"
+              onClick={() => navigate("/airlines")}
+            >
               <div className="logo">
                 <img src={airline.logo} alt={airline.name} loading="lazy" />
               </div>
